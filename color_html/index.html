@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>嘤嘤嘤</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="JavaScript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // var Color=document.querySelector("#color");
+        // Color.addEventListener("change",colorchange,false);
+
+        function colorchange(){
+            //alert("fff");在选择完颜色之后，点击了确认按钮后才出发change事件。
+            var Color=document.querySelector("#color");
+            Color.click();  //出现问题处
+            alert(Color.value);
+            // Artical.style.color=Color.value;
+        }
+    </script>
+</head>
+<body>
+    <div id="max">
+        <div id="btn">
+            <div class="img-box">
+                <div class="img"><img src="love.png" alt="加载图片失败"></div>
+                <div class="img"><img src="love.png" alt="加载图片失败"></div>
+                <div class="img"><img src="love.png" alt="加载图片失败"></div>
+            </div>
+        </div>
+    </div>
+    <div id="set">
+        <div id="botm">
+            <span>爱心大小：</span><input id="size" type="range" min="0" max="300" step="1" value="0"/>
+            <br>
+            <br>
+            <span>背景颜色：</span>
+            <input type="color" id="color" value="" οnchange="colorchange()">
+             <button id="set-color">刷新背景</button>
+            <br><br>
+            <button id="exit">关闭控制窗口</button>
+            <br>
+            <a href="#">点击背景可打开此窗口</a>
+        </div>
+    </div>
+</body>
+</html>
